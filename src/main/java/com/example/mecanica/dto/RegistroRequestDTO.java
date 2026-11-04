@@ -13,7 +13,7 @@ public record RegistroRequestDTO(
 
         @NotBlank(message = "Descricao obrigatoria!")
         @Size(min = 100)
-        StringBuilder descricao,
+        String descricao,
 
         EstadoRegistro estado,
         Long idCadt

@@ -34,4 +34,7 @@ public class Cadastro {
 
     @OneToMany(mappedBy = "cadastro")
     private List<Registro> registros;
+
+    @OneToMany(mappedBy = "cadastro")
+    private List<Manutencao> manutencaos;
 }

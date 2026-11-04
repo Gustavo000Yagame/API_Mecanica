@@ -35,7 +35,7 @@ public class RegistroController {
         return registroService.buscarRegistroPorId(idLog);
     }
 
-    @PutMapping
+    @PutMapping("/{idLog}")
     public RegistroResponseDTO atualizarRegistro(@PathVariable Long idLog, @Valid @RequestBody RegistroRequestDTO dto){
         return registroService.atualizarRegistro(idLog, dto);
     }

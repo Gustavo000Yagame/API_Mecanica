@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Table(name = "TBLog")
 @Entity
 @Getter @Setter
@@ -21,8 +23,8 @@ public class Registro {
     @Column(unique = true, name = "Codigo unico", nullable = false)
     private String cod;
 
-    @Column(length = 10000)
-    private StringBuilder descricao;
+    @Column(columnDefinition = "TEXT")
+    private String descricao;
 
     @Enumerated(EnumType.STRING)
     private EstadoRegistro estado;
@@ -31,5 +33,6 @@ public class Registro {
     @JoinColumn(name = "id_Cadastro", nullable = false)
     private Cadastro cadastro;
 
-
+    @OneToMany(mappedBy = "registro")
+    private List<Manutencao> manutencaos;
 }

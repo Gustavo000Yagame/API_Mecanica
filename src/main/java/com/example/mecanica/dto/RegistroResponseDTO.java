@@ -6,7 +6,7 @@ public record RegistroResponseDTO (
 
         Long idLog,
         String cod,
-        StringBuilder descricao,
+        String descricao,
         EstadoRegistro estado,
         Long idCadt,
         String tipoDoVeiculo,
