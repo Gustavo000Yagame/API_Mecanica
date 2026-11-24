@@ -17,11 +17,7 @@ public class CadastroService {
 
     private CadastroResponseDTO converterParaRespos(Cadastro cadastro) {
         return new CadastroResponseDTO(
-                cadastro.getIdCadastro(),
-                cadastro.getTipoVeiculo(),
-                cadastro.getModelo(),
-                cadastro.getEstado(),
-                cadastro.getDataDecadastro()
+                cadastro.getIdCadastro()
         );
     }
 

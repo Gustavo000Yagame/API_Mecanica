@@ -37,4 +37,8 @@ public class Cadastro {
 
     @OneToMany(mappedBy = "cadastro")
     private List<Manutencao> manutencaos;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_Cliente")
+    private Cliente cliente;
 }
